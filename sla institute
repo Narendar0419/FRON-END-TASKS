@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       body{
+         display: grid;
+         grid-template-areas: "header header" "main main " "sideads sideads" "footer footer";
+         grid-template-rows: 205 1fr;
+         grid-template-columns: 70% 1fr;
+         gap: 20px;
+         height: 70vh;
+         width: 80%;
+    }
+   header,article,div,footer {
+    background-color: burlywood;
+    padding: 20px;
+   }
+ #header{
+    grid-area: header;
+ }
+ #article{
+    grid: main;
+ }
+ #sideads{
+    grid-area: sideads;
+ }
+ #footer{
+    grid-area: footer;
+ }
+</style>
+<body>
+  <h2> Task 2: Website Page Layout
+
+Build a basic webpage layout.
+
+Layout:
+
+Header
+
+Sidebar | Main Content
+
+Footer</h2>
+<div id="layout">
+    <header id="header">pageheader</header>
+    <article id="main">main</article>
+    <div id="sideads">sideads</div>
+    <footer id="footer"> footer</footer>
+</div>  
+</body>
+</html>

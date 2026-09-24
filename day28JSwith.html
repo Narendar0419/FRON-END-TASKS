@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        class cars{
+            constructor (brand, model, year,  fueltype ){
+            this.brand=brand;
+            this.model=model;
+            this.year=year;
+            this.fueltype=fueltype
+            }
+           
+        
+      displaydetails() 
+      {
+        console.log(`BRAND : ${this.brand} MODEL:${this.model} YAER: ${this.year} FUELTYPE: ${this.fueltype} `)
+      }
+
+    getdetails()
+    {
+        this.brand=(prompt("enter a brand name"));
+        this.model=(prompt("enter a model name"));
+          this.year=(prompt("enter a manifacturing year"));
+        this.fueltype=(prompt("enter a fuel type"));
+    }
+}
+
+    let car1 = new cars ()
+    car1.getdetails();
+    car1.displaydetails();
+
+    </script>
+</body>
+</html>

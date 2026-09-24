@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 onclick=`this.innerhtml` ='naren' >check name by click</h1> -->
+       <h2>The onclick Attribute</h2>
+
+    <h2 onclick="this.innerHTML = 'New Text!'">Click Me to change the text!</h2>
+
+    smaple 2
+    <h1 onclick="changeText(this)">check by click</h1>
+    <script>
+        function changeText(b){
+            b.innerHTML=`its working`;
+        } 
+    </script>
+
+    smaple 3
+    <h1 id="demo" onclick="displayDate()">"THE TIME IS:" </h1>
+    <script>
+        function displayDate(){
+   document.getElementById("demo").innerHTML=Date()
+        }
+    </script>
+
+    sample 04
+     
+    <button id="mybtn">btn try it</button>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("mybtn").onclick=displayDate1()
+        function displayDate1(){ 
+        document.getElementById("dmeo1").innerHTML="smaple1"+ date()
+           }   </script>
+</body>
+</html>

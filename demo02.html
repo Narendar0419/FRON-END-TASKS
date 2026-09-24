@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #lay{
+        display: grid;
+        grid-template-areas: " pagehead pagehead   " 
+        " maincontent sideads  "
+        "footer footer  ";
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-columns: 20% 1fr 20% ;
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 0%;
+
+    }
+    header,footer,article,div{
+        padding: 24px;
+        background-color: rgb(188, 237, 9);
+
+    }
+    #pagehead{
+        grid-area: pagehead;
+    }
+    #nav{
+        grid-area: nav;
+    
+    }
+    #maincontent{
+        grid-area: maincontent;
+
+}
+#sideads{
+    grid-area: sideads;
+}
+
+#footer{
+    grid-area: footer;
+}
+</style>
+<body>
+    <div id="lay">
+<header id="pagehead">hedaer place</header>
+
+<article id="maincontent">main</article>
+<div id="sideads">ads</div>
+<footer id="footer">footer</footer>    </div>
+</body>
+</html>

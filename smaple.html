@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: grid;
+        grid-template-areas: "pagehead pagehead pagehead pagehead" "article article article article " "sidebar main main main" "footer footer footer footer";  
+       grid-template-rows: 90px 300px 1fr 60px;
+        grid-template-columns: 27% 1fr 20% 20%;
+        gap: 10px;
+        height: 100vh;
+        margin: 0%;
+        
+
+    }
+    header,article,aside,div,footer{
+        padding: 20px;
+        background-color: rgb(237, 233, 229);
+    }
+    #pagehead{
+        grid-area: pagehead;
+    }
+    #article{
+        
+    grid-area: article;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      background-color: rgba(222, 241, 241, 0.66);
+    }
+    aside{
+        grid-area: sidebar;
+        
+    }
+    #main{
+        grid-area: main;
+        display: flex;
+        justify-content: space-around;
+        
+        
+    }
+    #footer{
+        grid-area: footer;
+    }
+    nav {
+        display: flex;
+        
+        background-color: rgb(13, 13, 132);
+        width: 100%;
+        align-items: center;
+        color: azure;
+    }
+    .menu{
+         background-color: rgb(13, 13, 132);
+       display: flex;
+       margin-left: auto;
+       gap: 20px; 
+       
+       
+    }
+    nav a{
+        color: aliceblue;
+        
+    }
+    .image{
+        background-color: azure;
+    }
+    .emportal{
+        background-color: azure;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+        background-color: rgb(7, 7, 121);
+        color: aliceblue;
+        border-radius: 7px;
+    }
+    .sidebar{
+        background-color: rgb(4, 4, 83);
+        border-radius: 9px;
+        color: azure;
+    }
+    #change{
+        background-color: rgb(18, 18, 228);
+        /* height: 20px; */
+        width: 100%;
+        padding: 10px;
+        
+    }
+    .info{
+        border-radius: 9px;
+        background-color: azure;
+    }
+   #profile{
+    width: 40%;
+    height: 100px;
+    border: solid white;
+    border-radius: 80%;
+    padding: 10px;
+   }
+   .card1{
+    display: flex;
+    width: 60%;
+    height: 300px;
+    background-color: azure;
+    border: solid white;
+    border-radius: 10px;
+    height: 300px;
+    width: 400px;
+    
+    
+    
+   }
+    .deatils h2,h3{
+        background-color: azure;
+    
+    }
+    .card2{
+         margin-bottom: 300px;
+        float: right;;
+        width: 400px;
+        height: 300px;
+        background-color: azure;
+        border: solid azure;
+        border-radius: 10px;
+        margin-bottom: 200px;
+       
+    
+    }
+</style>
+<body>
+    <header id="pagehead"> 
+        <nav>
+            <br>
+            <br>
+            <img width="80px" height="60px" src="data:image/png;base64,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" alt="logo">
+            <br>
+            
+            <h2>abc tech</h2>
+            <div class="menu">
+            <a href="day02.html">dashboard</a>
+            <a href="day03T.html">employees</a>
+            <a href="day03T.html">leave</a>
+            <a href="day04T.html">report</a>
+            <a href="day05T.html">contact</a>
+            <a href="day05T.html">logout</a> </div>
+        </nav>
+    </header>
+    <article id="article">
+      <div class="emportal">
+   <h1 >EMPLOYEE PORTAL</h1>
+        <h2  style="color: blue;">welcome to abc tech solution</h2>
+        <p>access your profile,manage leaves, view announcemennts and stay
+            update with compnay innformation
+        </p>
+     <button>view portal</button>  </div>
+      
+        <div class="image">
+        <img width="500px" height="240px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkD-LiyMyFRqOwscsTstbGzN3X7gZKWnL4IltUiN8byA&s=10" alt="emloye img">
+      </div>
+       
+     
+    </article>
+    <aside id="sidebar">
+        <div class="sidebar">
+        <h1>quick menu</h1>
+        <h2 id="change">dashboard</h2>
+        <h2>my profile</h2>
+        <h2>leaave apply</h2>
+        <h2>payroll</h2>
+        <h2>performance</h2>
+        <h2>documents</h2>
+        <h2>announcement</h2>
+        <h2>setting</h2>
+        </div>
+        <br>
+        <br>
+        <div class="info">
+            <h1 style="color: rgb(3, 3, 121);">company info</h1>
+           <p>abc tech solution pvt ltd.
+            ,tech park </p>
+            <p>chennai-898 </p>
+            <p>91+6575876574 </p>
+            <p>info@gmail.com
+            www.abctecch.com </p>
+        </div>
+    </aside>
+    <div id="main"> 
+        <div class="card1">
+        <img id="profile"    src="https://png.pngtree.com/png-vector/20230903/ourmid/pngtree-3d-illustration-avatar-profile-man-png-image_9945226.png" alt="profile">
+        <div class="details" style="background-color: azure;">
+            <h2>NARENDAR PT</h2> 
+        <H3 style="color: rgb(45, 45, 223);">MERN STACK DEVELOPER</H3> 
+        <H3>EMPLOYEE:2002</H3> 
+        <H3>DEPARTMENT:IT</H3> 
+        <H3>LOCATION:CHEnNAI,INDIA</H3> 
+        </div> </div> <br>
+        <br>
+        <div class="card2">
+            <div class="para2" style="background-color: azure;">
+            <h2>announcement</h2>
+            <h3>annual day celebration</h3>  
+            <h3>traininng program</h3>
+            <h3>maintence program</h3> 
+
+            </div>
+        </div>
+    </div>
+    <footer id="footer">footer</footer>
+</body>
+</html>

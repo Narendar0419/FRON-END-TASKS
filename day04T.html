@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cornsilk;">
+    <!-- Learn the purpose of <form> in HTML. Create a basic form structure with action and method.
+
+Practice using <input type="text">, <input type="password">, and <input type="email">. Create a login form. -->
+    <form action="day04Tsumbit.html">
+       <h1>MY AADHAR VERIFICATION</h1> 
+      NAME: <input type="text">
+      USER ID: <input type="text">
+      PASSWORD: <input type="password">
+       AGE: <input type="number">
+         EMAIL: <input type="email">
+       AADHAR NUMBER: <input type="text">
+       <input type="submit" value="submit"> <br>
+       <label for="country">country</label>
+     <select name="country" id="country" required>
+        <option value="india">india</option>
+        <option value="uk">uk</option>
+        <option value="america">america</option>
+     </select>
+    </form> <br><br><br>
+    <!-- Use checkboxes for multiple choices, radio buttons for single choice, and number fields for numeric input. -->
+     <form action="day04Tsumbit.html">
+        <!-- single choices -->
+         <label for="select gender">select gender</select></label> <br>
+        MALE <input type="radio"><br>
+        FEMALE <input type="radio"> <br>
+        TRANSGENDER <input type="radio"> <br>
+
+        <!-- MULTIPLE CHOICES -->
+        <h1> CLICK WHICH DOCUMENTS YOU HAVE </h1>
+         License<input type="checkbox"> <br>
+         PAN CARD <input type="checkbox"> <br>
+         BIRTH CERTIFICATION <input type="checkbox"> <br>
+         PASSPORT <input type="checkbox"> <br>
+     </form>
+     <!-- Learn <label> for accessibility and placeholder for hints. Connect labels with inputs using for and id. -->
+       <h3> <b>Learn <label> for accessibility and placeholder for hints</b> 
+         </h3> <br>
+         <label for="name">name</label>
+        <input type="text" id="name" name="name" placeholder=" type your name"> <br>
+        <label for="age">age</label>
+        <input type="number" id="age" name="age" placeholder="type your age"> <br><br>
+
+      <!-- Use required to make fields mandatory. Practice building a signup form where name, email, and password are required. -->
+
+       <form action="submit04">
+       <h1> USING REQUIRED TAG </h1> 
+      NAME: <input type="text" required>
+      USER ID: <input type="text" required>
+      PASSWORD: <input type="password" required>
+       BIKE NUMBER: <input type="text">
+         EMAIL: <input type="email" required>
+       BIKE RC NO: <input type="text" required>
+       VECHILE MANIFACTURE date: <input type="date" required>
+
+    </form> <br><br><br>
+
+    <!-- Build a registration form with text, email, password, gender (radio), hobbies (checkbox), age (number), and submit button. Include labels, placeholders, and validation.
+
+ -->
+    
+
+</body>
+
+</html>

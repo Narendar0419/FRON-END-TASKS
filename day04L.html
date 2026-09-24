@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="day02.html" method="get">
+        <h1> <B> LOGIN PAGE</B></h1>
+        NAME:<input type="text"> <br>
+        USER ID: <input type="text"> <br>
+        PASSWORD:<input type="password"> <br>
+
+    </form>
+     <form action="day02.html">
+        <label for="fname">FIRSTNAME</label>
+        <input type="text" id="fname" name="fnmae" value="type here..">
+        <input  type="submit" value="submit">
+     </form>
+     <label for="country">country</label>
+     <select name="country" id="country">
+        <option value="india">india</option>
+        <option value="uk">uk</option>
+        <option value="america">america</option>
+     </select>
+     <label for="country">country</label>
+       <select name="country" id="country" size="3" multiple>
+        <option value="india">india</option>
+        <option value="uk">uk</option>
+        <option value="america">america</option>
+          <option value="congo"> congo</option>
+        <option value="argentina">argentina</option>
+        <option value="america">africa</option>
+     </select> <br> <br>
+     <label for="sports">sports</label>
+     <select name="sports" id="sports">
+        <option value="sports">slecet indoor/outdoor games</option>
+        <optgroup label="indoor games"> 
+            <option value="caram">caram</option>
+             <option value="tennis">tennis</option>
+              <option value="batmitton">batmitton</option>
+        </optgroup> 
+       
+        <optgroup label="outdoor games"> 
+            <option value="cricket">cricket</option>
+             <option value="football">football</option>
+              <option value="hockey">hockey</option>
+        </optgroup>
+     </select> <br>
+     <fieldset>
+        <legend> PERSONAL INFORMATION</legend>
+        <label for="firstname">firstname</label>
+        <input type="text" id="fristname" name=firstname">
+        <Label for="address">address</Label>
+        <input type="text" id="address" name="address">
+     </fieldset>
+     <label for="server"> choose a server</label>
+     <input list="browsers" id="server" name="server">
+     <datalist id="browsers">
+        <option value="net">net</option>
+        <option value="chrome">chrome</option>
+        <option value="edge">edge</option>
+        <option value="safari">safari</option>
+     </datalist>
+</body>
+</html>

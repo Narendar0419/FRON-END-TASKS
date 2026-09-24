@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WildHaven Zoo | Nature & Conservation Sanctuary</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  * {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fcfdfc;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #1b4332;
+ 
+  
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Two Column Layout */
+.two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.col-text, .col-image {
+  flex: 1 1 450px;
+}
+
+/* Button style */
+.btn {
+  display: inline-block;
+  background-color: #2d6a4f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #1b4332;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #1b4332;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo h2 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #b7e4c7;
+}
+
+/* Hero Section */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('assets/hero_forest.png');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+/* About Section */
+.about {
+  background-color: #f4f9f4;
+}
+
+.about h3 {
+  color: #2d6a4f;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  color: #1b4332;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.col-image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animals Grid Section */
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.animal-card {
+  background-color: white;
+  border: 1px solid #e2ece9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  color: #1b4332;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Tickets & Hours Section */
+.tickets {
+  background-color: #e2ece9;
+}
+
+.tickets h2 {
+  color: #1b4332;
+  margin-bottom: 20px;
+}
+
+.tickets p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.price-list li, .hours-list li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(27, 67, 50, 0.15);
+}
+
+.hours-list .note {
+  font-size: 0.9rem;
+  border-bottom: none;
+  color: #666;
+}
+
+/* Contact Form Section */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f4f9f4;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e2ece9;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1b4332;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #2d6a4f;
+  outline: none;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1b4332;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <h2> WildHaven Zoo</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#animals">Our Animals</a></li>
+          <li><a href="#tickets">Tickets & Hours</a></li>
+          <li><a href="#contact">Contact</a></li>
+         
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Experience the Wild</h1>
+      <p>Welcome to WildHaven Zoo, a natural sanctuary where animals roam in beautiful, species-appropriate habitats. Plan your visit today and support global wildlife conservation.</p>
+      <a href="#tickets" class="btn">Plan Your Visit</a>
+    </div>
+  </section>
+
+ 
+  <section id="about" class="about">
+    <div class="container two-col">
+      <div class="col-text">
+        <h3>About WildHaven</h3>
+        <h2>A Safe Haven for Wildlife</h2>
+        <p>At WildHaven Zoo, we focus on conservation, rehabilitation, and education. We provide natural habitats that encourage native animal behavior. Our goal is to connect visitors with the beauty of nature and inspire action to protect our planet's biodiversity.</p>
+        <p>Every ticket purchased helps support our veterinary care program and our international anti-poaching wildlife projects.</p>
+      </div>
+      <div class="col-image">
+        <img src="assets/macaw.png" alt="Colorful Macaw Parrot">
+      </div>
+    </div>
+  </section>
+
+
+  <section id="animals" class="animals">
+    <div class="container">
+      <h2 class="section-title">Meet Our Residents</h2>
+      <p class="section-desc">Learn about some of the amazing animal species you will encounter during your visit.</p>
+      
+      <div class="animal-grid">
+       
+        <div class="animal-card">
+          <img src="assets/lion.png" alt="Majestic Lion">
+          <div class="card-body">
+            <h3>Savanna Lion</h3>
+            <p>Known as the king of the jungle, our lions live in a spacious grassland area designed to match the African savanna.</p>
+          </div>
+        </div>
+        
+   
+        <div class="animal-card">
+          <img src="assets/panda.png" alt="Giant Panda">
+          <div class="card-body">
+            <h3>Giant Panda</h3>
+            <p>Mei Mei the giant panda loves eating fresh bamboo and playing on wooden structures in her mist-cooled highland home.</p>
+          </div>
+        </div>
+        
+       
+        <div class="animal-card">
+          <img src="assets/macaw.png" alt="Scarlet Macaw">
+          <div class="card-body">
+            <h3>Scarlet Macaw</h3>
+            <p>These intelligent, colorful birds live in our tropical dome aviary, flying freely among tall palms and broadleaf trees.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="tickets" class="tickets">
+    <div class="container two-col">
+      <div class="col-text">
+        <h2>Admissions & Pricing</h2>
+        <p>Buy your tickets at the gate or online to support our sanctuary.</p>
+        <ul class="price-list">
+          <li><strong>Adults (Ages 13+):</strong> $25.00</li>
+          <li><strong>Children (Ages 3-12):</strong> $15.00</li>
+          <li><strong>Infants (Under 3):</strong> Free</li>
+        </ul>
+      </div>
+      <div class="col-text">
+        <h2>Opening Hours</h2>
+        <p>We are open every day of the week, including holidays!</p>
+        <ul class="hours-list">
+          <li><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</li>
+          <li><strong>Saturday - Sunday:</strong> 9:00 AM - 6:00 PM</li>
+          <li class="note"><em>*Last entry is 1 hour before closing time.</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-desc">Have questions about group visits, educational tours, or donations? Send us a message.</p>
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 WildHaven Zoo. All rights reserved. | Dedicated to Wildlife Conservation.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

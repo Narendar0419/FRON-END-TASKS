@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <script>
+      
+        // function getNumbers(){
+        //     return [10,20,30,40,50]
+        // }
+        // function calculatesum(Numbers){
+        //     return numbers.reduce((sum,num)=>sum+num,0)
+        // }
+        //  function calculateaverage(Numbers){
+        //     return  calculatesum(numbers) / numbers.length;
+        // }
+        // const numbers=getNumbers();
+        // console.log("sum:", calculatesum(numbers));
+        // console.log("average:", calculateaverage(numbers));
+  // call back
+
+//   function myDisplay(some){
+//     console.log("sum of 2 values =" + some);
+//   }
+//   function mycalculator(num1,num2,mycallback){
+//     let sum=num1+num2;
+//     mycallback(sum);
+//   }
+//   mycalculator(32,34, myDisplay);
+
+// let fname =setTimeout(myfunction,4000);
+
+// function myfunction(){
+//     console.log("welcome to SLA HAPPY LEARNING>>>>> GO AHEAD!!!!!!");
+// }
+
+const myNumners =[2,-74,,3,88,-34,79,-34,384];
+const posNumbers=removeNeg(myNumners,(a)=>a>=0);
+console.log(posNumbers);
+
+function removeNeg(numbers,callback){
+    const myarray=[];
+    for (const a of numbers){
+        if (callback(a)){
+            myarray.push(a);
+        }
+    }
+    return myarray;
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+<h3>Sample1</h3>
+<h4>Sample2</h4>
+<h3>Sample3</h3>
+<h4>Sample4</h4>
+<h3>h3 tag</h3>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("h3");
+
+document.getElementById("demo").innerHTML = 
+'The first h3 (index 0) inside "main" is: ' + y[2].innerHTML ;
+//'The second h3 (index 1) inside "main" is: ' + y[1].innerHTML;
+
+</script>
+
+</body>
+</html>
