@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        1. Create a Promise that resolves with the message `"Welcome to Js Promise "` after 2 seconds. <br>
+
+2. Create a Promise that rejects with the message `"Invalid Data"` after 3 seconds. <br>
+
+3. Write a function `checkNumber(num)` that returns a Promise: <br>
+
+   * Resolve if the number is Odd. <br>
+
+   * Reject if the number is Even <br>
+
+4. Create a Promise that checks whether a person's age is greater than or equal to 18. <br>
+
+   * Resolve with `"Eligible for Employement"`.
+
+   * Reject with `"Not eligible for Employement"`. <br>
+
+5. Write a function `Sum(a, b)` using Promises. <br>
+
+   * Resolve with the result of Sum.
+
+   * Reject if `b` is `-value`. <br>
+
+6. Create a Promise that simulates ordering food: <br>
+
+   * Display `"Order placed"`.
+
+   * Resolve with `"Food is ready"` after 5 seconds. <br>
+
+7. Create a Promise that checks whether a string is empty. <br>
+
+   * Resolve if the string contains characters.
+
+   * Reject if the string is empty. <br>
+
+8. Write a function `findEven(num)` that returns a Promise: <br>
+
+   * Resolve if the number is even.
+
+   * Reject if the number is odd. <br>
+
+9. Create three Promises that resolve after 1 second, 2 seconds, and 3 seconds. Use `Promise.all()` to display all results. <br>
+
+10. Create three Promises where one Promise rejects. Use `Promise.race()` and observe which Promise completes first. <br>
+    </h2>
+    <script>
+        //  program 1
+let promise = new Promise(function(resolve, reject) {
+
+    setTimeout(function() {
+        resolve("Welcome to Js Promise");
+    }, 2000);
+
+});
+
+promise
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+
+    //  program2
+   
+let promise1= new Promise(function(resolve, reject) {
+
+    setTimeout(function() {
+        reject("Invalid Data");
+    }, 3000);
+
+});
+
+promise1
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+// program 3
+
+function checkNumber(num) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (num % 2 !== 0) {
+            resolve("Number is Odd");
+        }
+        else {
+            reject("Number is Even");
+        }
+
+    });
+
+}
+
+checkNumber(7)
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+
+// program 4
+function checkAge(age) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (age >= 18) {
+            resolve("Eligible for Employement");
+        }
+        else {
+            reject("Not eligible for Employement");
+        }
+
+    });
+
+}
+
+checkAge(20)
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+    // program5
+    
+function Sum(a, b) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (b < 0) {
+            reject("b should not be negative");
+        }
+        else {
+            resolve(a + b);
+        }
+
+    });
+
+}
+
+Sum(10, 20)
+    .then(function(result) {
+        console.log("Sum:", result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+    
+    //  program 6 
+    
+function orderFood() {
+
+    return new Promise(function(resolve, reject) {
+
+        console.log("Order placed");
+
+        setTimeout(function() {
+            resolve("Food is ready");
+        }, 5000);
+
+    });
+
+}
+
+orderFood()
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+//  program7
+
+function checkString(str) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (str.length > 0) {
+            resolve("String contains characters");
+        }
+        else {
+            reject("String is empty");
+        }
+
+    });
+
+}
+
+checkString("Hello")
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+// program 8
+
+function findEven(num) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (num % 2 === 0) {
+            resolve("Number is Even");
+        }
+        else {
+            reject("Number is Odd");
+        }
+
+    });
+
+}
+
+findEven(10)
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+    // program 9
+   
+let promise12= new Promise(function(resolve) {
+
+    setTimeout(function() {
+        resolve("Promise 12completed");
+    }, 1000);
+
+});
+
+let promise22 = new Promise(function(resolve) {
+
+    setTimeout(function() {
+        resolve("Promise 22 completed");
+    }, 2000);
+
+});
+
+let promise33 = new Promise(function(resolve) {
+
+    setTimeout(function() {
+        resolve("Promise 33 completed");
+    }, 3000);
+
+});
+
+Promise.all([promise12 ,promise22 ,promise33])
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+    // program 10
+let promise10 = new Promise(function(resolve) {
+
+    setTimeout(function() {
+        resolve("Promise 10 completed");
+    }, 3000);
+
+});
+
+let promise20 = new Promise(function(resolve) {
+
+    setTimeout(function() {
+        resolve("Promise 20 completed");
+    }, 1000);
+
+});
+
+let promise30 = new Promise(function(resolve, reject) {
+
+    setTimeout(function() {
+        reject("Promise 30 rejected");
+    }, 2000);
+
+});
+
+Promise.race([promise10, promise20, promise30])
+    .then(function(result) {
+        console.log(result);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+
+
+
+    </script>
+</body>
+</html>
