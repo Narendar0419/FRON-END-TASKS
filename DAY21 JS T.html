@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Use push, pop, shift, unshift on an array. <br>
+
+Print all elements of an array using for loop. <br>
+
+Use map to double all numbers in an array. <br>
+
+Use filter to get even numbers from an array. <br>
+
+Use reduce to find the sum of an array. <br>
+
+Find the first number greater than 10. <br>
+
+Check if array includes a specific value.</h2>
+
+
+<script>
+   
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits);
+
+fruits.push("Orange");
+console.log(fruits);
+
+
+fruits.pop();
+console.log(fruits);
+
+fruits.unshift("Grapes");
+console.log(fruits);
+
+fruits.shift();
+console.log(fruits);
+
+
+let numbers = [10, 20, 30, 40, 50];
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+
+let numbers1 = [1, 2, 3, 4, 5];
+
+let doubleNumbers = numbers1.map(function(num) {
+    return num * 2;
+});
+
+console.log(doubleNumbers);
+
+
+let numbers2= [1, 2, 3, 4, 5, 6, 7, 8];
+
+let evenNumbers = numbers2.filter(function(num) {
+    return num % 2 === 0;
+});
+
+console.log(evenNumbers);
+
+
+let numbers3 = [10, 20, 30, 40];
+
+let sum = numbers3.reduce(function(total, num) {
+    return total + num;
+}, 0);
+
+console.log(sum);
+
+
+let numbers4 = [5, 8, 12, 15, 20];
+
+let result = numbers4.find(function(num) {
+    return num > 10;
+});
+
+console.log(result);
+
+
+let fruits1 = ["Apple", "Banana", "Mango", "Orange"];
+
+let result1 = fruits1.includes("Mango");
+
+console.log(result1);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
