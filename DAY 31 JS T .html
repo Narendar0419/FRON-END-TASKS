@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // program 01
+function waitTwoSeconds() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve();
+        }, 2000);
+
+    });
+
+}
+
+async function task() {
+
+    await waitTwoSeconds();
+
+    console.log("Task completed");
+
+}
+
+task();
+
+// program02
+
+function getUser() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve("Naren");
+        }, 3000);
+
+    });
+
+}
+
+async function fetchUserData() {
+
+    let name = await getUser();
+
+    console.log("User name:", name);
+
+}
+
+fetchUserData();
+
+// program03
+
+function addNumbers(a, b) {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve(a + b);
+        }, 1000);
+
+    });
+
+}
+
+async function calculate() {
+
+    let result = await addNumbers(10, 20);
+
+    console.log("Sum:", result);
+
+}
+
+calculate();
+
+// program 04
+\
+function task1() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            console.log("Task 1 completed");
+            resolve();
+        }, 1000);
+
+    });
+
+}
+
+function task2() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            console.log("Task 2 completed");
+            resolve();
+        }, 1000);
+
+    });
+
+}
+
+function task3() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            console.log("Task 3 completed");
+            resolve();
+        }, 1000);
+
+    });
+
+}
+
+async function runTasks() {
+
+    await task1();
+    await task2();
+    await task3();
+
+}
+
+runTasks();
+
+// program 05
+
+function orderFood() {
+
+    return new Promise(function(resolve) {
+
+        console.log("Order placed");
+
+        setTimeout(function() {
+            resolve("Food is ready");
+        }, 3000);
+
+    });
+
+}
+
+async function enjoyFood() {
+
+    let result = await orderFood();
+
+    console.log(result);
+
+    console.log("Enjoy your meal");
+
+}
+
+enjoyFood();
+
+// program 06
+
+function downloadFile() {
+
+    return new Promise(function(resolve) {
+
+        console.log("Download started...");
+
+        setTimeout(function() {
+            resolve("Download completed");
+        }, 3000);
+
+    });
+
+}
+
+async function startDownload() {
+
+    let result = await downloadFile();
+
+    console.log(result);
+
+}
+
+startDownload();
+
+// program 07
+
+function checkNumber(num) {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+
+            if (num % 2 === 0) {
+                resolve("Number is Even");
+            }
+            else {
+                resolve("Number is Odd");
+            }
+
+        }, 2000);
+
+    });
+
+}
+
+async function check() {
+
+    let result = await checkNumber(10);
+
+    console.log(result);
+
+}
+
+check();
+
+// program 08
+
+async function checkData() {
+
+    try {
+
+        throw new Error("Invalid data");
+
+    }
+    catch (error) {
+
+        console.log("Error:", error.message);
+
+    }
+
+}
+
+checkData();
+
+// program 09
+
+function promise1() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve("Promise 1 completed");
+        }, 1000);
+
+    });
+
+}
+
+function promise2() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve("Promise 2 completed");
+        }, 2000);
+
+    });
+
+}
+
+function promise3() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve("Promise 3 completed");
+        }, 3000);
+
+    });
+
+}
+
+async function runPromises() {
+
+    let result1 = await promise1();
+    console.log(result1);
+
+    let result2 = await promise2();
+    console.log(result2);
+
+    let result3 = await promise3();
+    console.log(result3);
+
+}
+
+runPromises();
+
+// program10
+
+async function studentResult(mark) {
+
+    if (mark > 35) {
+        return "Pass";
+    }
+    else {
+        return "Fail";
+    }
+
+}
+
+async function checkResult() {
+
+    let result = await studentResult(50);
+
+    console.log("Student Result:", result);
+
+}
+
+checkResult();
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
