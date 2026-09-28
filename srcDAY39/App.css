@@ -1,0 +1,27 @@
+.card {
+  border: 2px solid black;
+  width: 250px;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card-content {
+  padding: 10px 0;
+
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer {
+  border-top: 1px solid gray;
+  padding-top: 10px;
+  font-weight: bold;
+}
